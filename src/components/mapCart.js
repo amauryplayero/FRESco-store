@@ -4,31 +4,33 @@ import { useEffect } from 'react'
 import {addItem} from '../redux/reducer'
 // import { showActiveCart } from '../redux/reducer'
 import axios from 'axios'
-
+import '../App.css'
 const myUrl = "http://localhost:3001"
 const mapThroughTheseItems = []
 const MapCart = (props) => {
 
-    console.log(props)
-    const productIdsArray = props.items.cart
-    
-    // const mapFunction = ()=>{
-    // for(let i=0; i<productIdsArray.length; i++){
-    //      axios.put(myUrl+`/showCart/${productIdsArray[i]}`)
-    //     .then(res=>{
-    //         mapThroughTheseItems.push(res.data[0])
-    //     })
-    // }
-    // }
+     const productIdsArray = []
 
+
+     
+    console.log(productIdsArray)
     useEffect(()=>{
-      
-        
+
     }, []) 
 
-    const mappedProducts = props.items.cart.map((e,i)=>{
-    return <div id="soapCard" key={e.product_id} style={{border: 2+'px red solid', width: 90+'px'}}>
-        <img src={e.image_url} alt="" style={{width:50+'px'}}/>
+
+let counter = 0
+const mappedProducts = props.items.cart.map((e,i)=>{
+   counter =  0
+        console.log(productIdsArray.includes(e.product_id))
+        if(productIdsArray.includes(e.product_id)){
+
+        }
+        productIdsArray.push(e.product_id)
+        
+    return <div>
+    <div key={e.product_id} id="soapCardInCart">
+        <img src={e.image_url} alt="" id="imageIconInCart"/>
         <div id="infoAndButtonContainer">
             <div id="info">
                 <h3 >{e.type}</h3>
@@ -37,9 +39,11 @@ const MapCart = (props) => {
                 <p id="freeShipping">free shipping</p>
 
             </div>
-            <button  id={e.product_id} 
-                >Add to cart</button>
+            <button  id={e.product_id}>Add to cart</button>
         </div>
+            <h2>{counter}</h2>
+            <button><h1>-</h1></button><button><h1>+</h1></button><button><h1>X</h1></button>
+    </div>
     </div>
  })
        

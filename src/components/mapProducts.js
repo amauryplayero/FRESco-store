@@ -6,7 +6,7 @@ import '../App.css'
 
 function MapProducts(props) {
 
-    // props.clearCart()
+  
     const addItem= (item) => {
         props.addItem(item)
     }

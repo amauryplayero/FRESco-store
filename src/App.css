@@ -62,14 +62,14 @@ body{
 
 /* SOAP SECTION */
 .productsCardContainer{
-  border:2px blue solid;
+  /* border:2px blue solid; */
   display:flex;
   justify-content:space-evenly;
-  margin-left: 25%;
+  margin-left: none;
   margin-right: 200px;
   margin-top: 330px;
   flex-wrap: wrap;
-  width: 50vw;
+  width: 100vw;
   height: auto;
 }
 
@@ -232,6 +232,7 @@ font-size: 14px;
   border-radius: 20px;
   height: 22px;
   background-image: linear-gradient(to right, rgb(34, 112, 247), rgb(93, 0, 244));
+  color: white;
 
 }
 
@@ -270,4 +271,18 @@ font-size: 14px;
   font-family:'Readex Pro', sans-serif;
   font-size: 30px;
   font-weight:500;
+}
+
+/* CART SECTION//////////////////////// */
+
+#soapCardInCart{
+  width: 50vw;
+  border: 2px red solid;
+  display: flex;
+}
+
+#imageIconInCart{
+  width: 130px;
+  border-radius: 20px;
+
 }

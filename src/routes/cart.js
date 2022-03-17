@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import MapCart from '../components/mapCart'
 import axios from 'axios'
 import Navigation from '../components/navigation'
-
+import "../App.css"
 // import { addItem } from '../redux/reducer';
 import { connect } from 'react-redux'
 import  {clearCart} from '../redux/reducer';
@@ -16,7 +16,7 @@ const myUrl = "http://localhost:3001"
 
 function Cart(props) {   
 
-    console.log(props)
+
     const pathName = `${useLocation().pathname.substring(1)}`
 
     const redirectToCheckout =()=>{
