@@ -3,13 +3,19 @@ import { combineReducers } from 'redux'
 
 const initialState = {
     cart: [],
-    // activeItemsInCart: []
+    input: "",
+    signedInUser: { 
+        userName: "",
+        authorized: false
+    }
 }
 
 
 //ACTION TYPES
 const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART'
 const CLEAR_CART = 'CLEAR_CART'
+const SET_SEARCH_INPUT = 'SET_SEARCH_INPUT'
+const SIGN_IN_USER = 'SIGN_IN_USER'
 
 //ACTION FUNCTIONS
 
@@ -28,23 +34,23 @@ export const clearCart = () =>{
     }
 }
 
+export const setSearchInput = (input) =>{
+    return{
+        type: SET_SEARCH_INPUT,
+        payload: input
+    }
+}
+
+export const signInUser = (userName, boolean) =>{
+    return {
+        type: SIGN_IN_USER,
+        payload: {username:userName,
+                authorized: boolean}
+
+    }
 
 
-// export const clearCart = () => {
-//     return{
-//         type: CLEAR_CART
-//     }
-// }
-
-// export const showActiveCart = (activeItemsToMap) =>{
-
-//     return{
-//         type: SHOW_ITEMS_TO_MAP_CART,
-//         payload: activeItemsToMap
-//     }
-
-// }
-
+}
 
 
 
@@ -59,12 +65,26 @@ const reducer = (state = initialState, action) => {
             
             return {cart: [...state.cart,items]}
             }
-    
-
-            
         case CLEAR_CART:
             return {cart: []}
+        
+        case SET_SEARCH_INPUT: 
+            const newInput = action.payload
+            if(newInput===""){
+            return {...state}
+            }else{
+            return {...state,input:newInput}
+            }
 
+        case SIGN_IN_USER:
+            const userName = action.payload.username
+            const authorized = action.payload.authorized
+
+            return { signedInUser: {
+                                username: userName,
+                                authorized: authorized
+                             }
+            }
         default:
             return{...state}
     }

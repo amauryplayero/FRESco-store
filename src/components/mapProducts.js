@@ -6,11 +6,11 @@ import '../App.css'
 
 function MapProducts(props) {
 
-  
     const addItem= (item) => {
+        
         props.addItem(item)
     }
-console.log(props)
+
     useEffect(()=>{
     },[props.items])
 

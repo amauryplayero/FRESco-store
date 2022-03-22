@@ -35,19 +35,21 @@ const getSoaps = () =>{
 
     return(
         <>
-            <div>Soaps</div>
+            <div className="sectionTitle"><h3>Soaps</h3></div>
         <div  className="productsCardContainer">
       
         <MapProducts data={soaps}/>
         </div>
 
-            <h1>Music</h1>
+        <div className="sectionTitle"><h3>Music</h3></div>
         <div className="productsCardContainer">
         <MapProducts data={cds}/>
         </div>
 
-        <div  className="productsCardContainer">
+        <div className="sectionTitle"><h3>Shirts</h3></div>
+        <div>
             <h1>Shirts</h1>
+        
         </div>
 
         </>

@@ -20,12 +20,17 @@ function Cart(props) {
     const pathName = `${useLocation().pathname.substring(1)}`
 
     const redirectToCheckout =()=>{
+
     axios.post(myUrl+`/create-checkout-session`)
     .then(res=>{
-        window.open(res.config.url)
-        console.log(res.config.url)
+       
+        console.log(res.data.url)
+        window.location.assign(res.data.url)
+        
         })
     }
+
+    
     useEffect(()=>{
 
     },[])
@@ -33,6 +38,9 @@ function Cart(props) {
     return(
         <>
         <Navigation />
+        <br/>
+        <br/>
+        <br/>
         <h1>cart</h1>
         <MapCart />
         <button onClick={()=>props.clearCart()}>clear cart</button>

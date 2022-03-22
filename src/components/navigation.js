@@ -1,24 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import { connect } from 'react-redux'
 import ProductCards from './productCard'
 import axios from "axios";
 import '../App.css'
-import { clearCart } from "../redux/reducer";
+import { setSearchInput } from "../redux/reducer";
+import Search from '../routes/search'
+
+const myUrl = "http://localhost:3001"
 
 function Navigation (props) {
-    const numberOfItems = props.items.cart.length
+
+    let navigate = useNavigate()
+    
+    let numberOfItems = 0
+    if(props.items===undefined){
+        numberOfItems = 0
+    } else {
+        numberOfItems = props.items.length
+    }
+
+    
     // console.log(props)
 
 let pathName = `${useLocation().pathname}`
 
 if (pathName==="/"){
     pathName='home'
-} else {
+    } else {
     pathName = pathName.substring(1)
+    }
+
+
+const handleSubmit=(event)=>{
+    let input = event.target[0].value
+
+    if(pathName==="search"){
+        event.preventDefault()
+        props.setSearchInput(input)
+        return
+    } else {
+            props.setSearchInput(input)
+            event.preventDefault()
+        navigate('search')
+    }
 }
-console.log(pathName)
+
+const isUserSignedIn = () => {
+    if(props.signedInUser.authorized===true){
+        return(
+            <>
+            <div> {props.signedInUser.username} </div>
+            <button onClick={props.signedInUser("",false)}>sign out </button>
+            </>
+        )
+    }
+}
+
 
 
 
@@ -34,11 +73,13 @@ console.log(pathName)
                         <Link to="/cart" className={`links${pathName}`}
                         >cart{`(${numberOfItems})`}
                         </Link>
-                        
-                        <input placeholder="search..." id={`searchBar${pathName}`}></input>
+                        <div style={{display: 'flex'}}>
+                        <form onSubmit={(event)=>handleSubmit(event)}><input placeholder="search..." id={`searchBar${pathName}`}></input></form>
+                        <img src="https://i.imgur.com/O4yGO7H.png" id="lupaIcon"/>
+                        </div>
                         <div id="loginAndRegisterContainer">
-                            <Link to="/logIn" className={`links${pathName}`} id="login">log in</Link>
-                            <Link to="/register" className={`links${pathName}`} id="register">register</Link>
+                            <Link to="/registration" className={`links${pathName}`} id="login">log in</Link>
+                            <Link to="/registration" className={`links${pathName}`} id="register">register</Link>
                         </div>
                     </div>
             </div>
@@ -47,9 +88,15 @@ console.log(pathName)
     )
 }
 const mapStateToProps = (state) =>{
+    console.log(state)
    return {
-    items: state
+    items: state.cart,
+    input: state.input,
+    signedInUser: { 
+        username: state.signedInUser,
+        authorized: state.signedInUser
+    }
    } 
 }
 
-export default connect(mapStateToProps)(Navigation)
+export default connect(mapStateToProps, {setSearchInput})(Navigation)

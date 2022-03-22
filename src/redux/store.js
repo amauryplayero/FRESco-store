@@ -18,13 +18,26 @@ const loadState = () => {
 }; 
 
 const saveState = (state) => {
+  // console.log(state)
 try {
-  const serializedState = JSON.stringify(state);
-  localStorage.setItem('state', serializedState);
+  const serializedCart = JSON.stringify(state);
+  const serializedUserName = JSON.stringify(state.signedInUser)
+  localStorage.setItem('state', serializedCart);
+  // localStorage.setItem('userCredentials', serializedUserName)
 } catch {
   // ignore write errors
 }
 };
+
+// const saveStateUserName = (state) => {
+//   try {
+//     const serializedState = JSON.stringify(state);
+//     localStorage.setItem('userCredentials', serializedState);
+//     localStorage.setItem('state', serializedState);
+//   } catch {
+//     // ignore write errors
+//   }
+//   };
 
 
 
@@ -35,10 +48,25 @@ const store = createStore(
 );
 
 store.subscribe(() => {
+  // saveState({
+  //  cart: store.getState().cart
+  // });
+
   saveState({
-   cart: store.getState().cart
-  
-  });
+    cart: store.getState().cart,
+    // signedInUser: {
+    //   userName: store.getState().signedInUser,
+    //   authorized: store.getState().signedInUser
+    // }
+    
+   });
+
+  // saveStateUserName({
+  //   signedInUser: {
+  //   username: store.getState().signedInUser.username,
+  //   authorized: store.getState().signedInUser.authorized
+  //   }
+  // })
 });
 
 

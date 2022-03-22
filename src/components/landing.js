@@ -15,7 +15,7 @@ function Landing (props) {
 
     const [registeredUser, setRegisteredUser] = useState(false)    
  
-    console.log(props)
+  
     useEffect(()=>{
        
     },[])
@@ -24,8 +24,8 @@ function Landing (props) {
         console.log('handled click from link')
     }
 
-    console.log(props.cart.cart.length)
-    const numberOfItems = props.cart.cart.length
+
+    // const numberOfItems = props.cart.cart.length
 
     return(
         <>
@@ -33,7 +33,7 @@ function Landing (props) {
        <Navigation />
        
       {/* <div id="soapsTitle" class="productTitle">Soaps</div> */}
-        <ProductCards registeredUser={registeredUser}/>
+        <ProductCards />
         </div>
         </>
 
