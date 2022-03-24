@@ -21,7 +21,7 @@ function Search (props) {
         if(filteredProducts===[]){
 
             return(
-                <div>no such products wei</div>
+                <div>no such products</div>
             )
         } else {
             return

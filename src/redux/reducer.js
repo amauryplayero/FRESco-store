@@ -60,15 +60,15 @@ export const addOneToQuantity = (product_id) => {
 }
 
 
-
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case ADD_PRODUCT_TO_CART:
             const items = action.payload  
-            console.log(state)
+            if(state.cart===0){
+            return {cart: [items]}
+            } else {
             return {cart: [...state.cart,items]}
-            
-            
+            }
         case CLEAR_CART:
             return {cart: []}
         

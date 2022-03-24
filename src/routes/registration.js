@@ -48,7 +48,7 @@ function Registration (props){
         .then(res=>{
             console.log(res)
             if(res.data==='authorized'){
-                console.log('congrats youre signed in')
+                alert('congrats youre signed in')
                 props.signInUser(`${e.target[0].value}`,true)
                 navigate('/')
             } else {
@@ -59,35 +59,62 @@ function Registration (props){
     }
 
    
-    // const userSignedIn = props.signedInUser
+   
 
     return(
         <>
-       
-        
-        <form id="registerForm"onSubmit={(e)=>handleRegisterSubmit(e)}>
-            register
-            name
-            <input></input>
-            username
-            <input></input>
-            email
-            <input></input>
-            password
-            <input type="password"></input>
-            <input type="submit" value="Register!!!"></input>
-         </form>
+        <button id="backButton" onClick={()=>navigate('/')}> back to store</button>
+        <div id="generalContainer">
+            <div class="formContainer">
+                <form id="signInForm"onSubmit={(e)=>handleSignInSubmit(e)}>
+                        <h1 id="signInH1">Sign in</h1>
+                    <div class="textContainer">
+                        <div>
+                            <p>username</p>
+                            <input></input>
+                        </div>
+
+                        <div>
+                            <p>password</p>
+                            <input type="password"></input>
+                            <br/>
+                            
+                            <input type="submit" value="sign in"></input>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
 
-        <form id="signInForm"onSubmit={(e)=>handleSignInSubmit(e)}>
-            sign in
-                username
-                <input></input>
-                password
-                <input type="password"></input>
-                <input type="submit" value="sign in"></input>
+            <div class="formContainer">
+                <form id="registerForm"onSubmit={(e)=>handleRegisterSubmit(e)}>
+                        <h1 id="registerH1">Register</h1>
+                    <div class="textContainer">
+                        <div>
+                        <p>name</p>
+                        <input></input>
+                        </div>
 
-        </form>
+                        <div>
+                        <p>username</p>
+                        <input></input>
+                        </div>
+
+                        <div>
+                        <p>email</p>
+                        <input></input>
+                        </div>
+
+                        <div>
+                        <p>password</p>
+                        <input type="password"></input>
+                        <br/>
+                        <input type="submit" value="Register"></input>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         </>
 
 

@@ -38,7 +38,7 @@ body{
 }
 .sectionTitle{
   display: flex;
-  justify-content: center;
+  margin-left: 15vw;
   font-size: 40px; 
   color: rgb(227, 35, 35);
   /* margin-left: 15vw; */
@@ -227,7 +227,7 @@ font-size: 14px;
 #loginAndRegisterContainer{
   width: fit-content;
   display: flex;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 #login{
@@ -240,13 +240,24 @@ font-size: 14px;
   margin-right: 10px;
 }
 
+#cartlogin{
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 2px 5px 2px 5px;
+  border: 2px white solid;
+  border-radius: 20px;
+  height: 22px;
+  margin-right: 10px;
+
+}
+
 #register{
   margin-top: 5px;
   font-size: 15px;
   padding: 2px 5px 2px 5px;
   /* border: 2px white solid; */
   border-radius: 20px;
-  height: 22px;
+  height: 25px;
   background-image: linear-gradient(to right, rgb(34, 112, 247), rgb(93, 0, 244));
   color: white;
 
@@ -284,6 +295,7 @@ font-size: 14px;
   font-weight: bolder;
   font-size: 30px;
   text-decoration: none;
+  
 }
 
 .linksregistration{
@@ -307,20 +319,176 @@ font-size: 14px;
 
 #soapCardInCart{
   width: 50vw;
-  border: 2px red solid;
+  /* border: 1px rgb(179, 179, 179) solid; */
+  background-color: rgb(242, 242, 242);
   display: flex;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: .03px 1px 5px  #888888;
+  margin: 60px 0 30px 60px;
+  
 }
 
 #imageIconInCart{
   width: 130px;
-  border-radius: 20px;
+  border-radius: 10px;
+  margin: 19px
 
 }
 
+
+
+#cartinfo{
+  /* border: 2px red solid; */
+  text-align: start;
+  width:160px;
+  /* height:30px; */
+  line-height: 3px;
+  border: 1px rgba(255, 0, 0, 0) solid;
+  height: 130px;
+  /* align-items: center; */
+  
+}
+#carttype{
+  margin-top: 47px;
+  font-size: 30px;
+  margin-bottom: 30px;
+
+}
+#cartname{
+  font-size: 20px;
+ 
+}
+#cartprice{
+  font-size: 35px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  color: rgb(16, 172, 16);
+  font-weight: bold;
+  /* border: 2px red solid; */
+}
+#cartfreeShipping{
+  color: #878787;
+  font-weight:normal;
+  font-size: 13px;
+  /* border: 2px red solid; */
+  margin-top: 0;
+}
+
+#priceAndShippingContainer{
+  /* border: 2px red solid; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-self: center; */
+  height: 130px;
+  margin-left: 290px;
+  align-items: center;
+
+
+}
+
+#cartButtonsContainer{
+  /* border: 2px red solid; */
+  width: fit-content;
+  margin-top: 50px;
+  margin-left: 35vw;
+}
+
+#clearCartButton{
+  
+  color:rgb(171, 170, 170);
+  border: 2px rgb(193, 193, 193) solid;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  /* background-image: linear-gradient(to right, rgb(34, 171, 39), rgb(1, 77, 25)); */
+
+}
+#clearCartButton:hover{
+  border: 2px rgb(255, 0, 4) solid;
+  color:rgb(255, 0, 4);
+}
+
+#checkOutButton{
+    margin-left: 30px;
+
+  border: none;
+  color:white;
+  font-weight: 900;
+  padding: 11px 13px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, rgb(34, 171, 39), rgb(1, 77, 25));
+}
+
+#checkOutButton:hover{
+  color:white;
+  background-color: rgb(12, 145, 54);
+  background-image: linear-gradient(to right, rgb(34, 171, 39), rgb(83, 208, 83));
+
+
+}
 /* ////////////REGISTRATION/////////////// */
 
-#registerForm{
-  display:flex;
+#generalContainer {
+  display: flex;
+  height: 100vh;
+  /* border: 2px red solid; */
 
-  border: 2px red solid;
+}
+
+.formContainer{
+  width: 50%;
+ /* display: block; */
+}
+
+#signInForm{
+  background-color: rgb(201, 201, 201);
+  
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px red solid; */
+}
+#registerForm{
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px red solid; */
+}
+#backButton{
+  position:fixed;
+  margin: 20px;
+  /* font-weight: bold; */
+  /* font-size: larger; */
+}
+.textContainer h1{
+  /* position: fixed; */
+
+
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.textContainer p{
+  font-weight: bold;
+  font-size: 20px;
+}
+#signInH1{
+  /* border: 2px solid red; */
+  /* position: fixed; */
+  /* top: 20vh;
+  left: 10vh; */
+  /* padding-bottom: 30vh; */
+}
+
+#registerH1{
+  /* position: fixed; */
+  /* left: 20px; */
 }

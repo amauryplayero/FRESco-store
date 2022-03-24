@@ -17,7 +17,7 @@ const MapCart = (props) => {
     setProducts([props.items.cart])
     }, [props.items.cart]) 
     
-    console.log(products)
+    // console.log(products)
     let unique = [...new Set(products[0])]
     
     
@@ -28,22 +28,24 @@ const MapCart = (props) => {
     <div key={e.product_id} id="soapCardInCart">
         <img src={e.image_url} alt="" id="imageIconInCart"/>
         <div id="infoAndButtonContainer">
-            <div id="info">
-                <h3 >{e.type}</h3>
-                <p id="name" >{e.name}</p>
-                <p id="price">{e.price}</p>
-                <p id="freeShipping">free shipping</p>
+            <div id="cartinfo">
+                <h3 id="carttype">{e.type}</h3>
+                <p id="cartname" >{e.name}</p>
 
             </div>
             {/* <button  id={e.product_id}>Add to cart</button> */}
         </div>
-            <h2>{ }</h2>
-            <button><h1>-</h1></button><button><h1>+</h1></button><button><h1>X</h1></button>
+            <div id="priceAndShippingContainer">
+                <p id="cartprice">{e.price}</p>
+                <p id="cartfreeShipping">+free shipping</p>
+            </div>
+            <h2>{  }</h2>
+            {/* <button><h1>-</h1></button><button><h1>+</h1></button><button><h1>X</h1></button> */}
     </div>
     </div>
     })
 
-    console.log(mappedProducts.length)
+    // console.log(mappedProducts.length)
     return (
         <>
         <div>

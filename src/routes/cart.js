@@ -41,10 +41,14 @@ function Cart(props) {
         <br/>
         <br/>
         <br/>
-        <h1>cart</h1>
+        <br/>
+        <br/>
+        {/* <h1>cart</h1> */}
         <MapCart />
-        <button onClick={()=>props.clearCart()}>clear cart</button>
-        <button onClick={()=>redirectToCheckout(props.items.cart.length)}>CHECK OUT</button>
+        <div id="cartButtonsContainer">
+        <button onClick={()=>props.clearCart()} id="clearCartButton">clear cart</button>
+        <button onClick={()=>redirectToCheckout(props.items.cart.length)} id="checkOutButton">check out</button>
+        </div>
         </>
     )
 }

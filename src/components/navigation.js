@@ -8,7 +8,7 @@ import '../App.css'
 import { setSearchInput } from "../redux/reducer";
 import Search from '../routes/search'
 
-const myUrl = "http://localhost:3001"
+const myUrl = "http://localhost:3002"
 
 function Navigation (props) {
 
@@ -22,11 +22,11 @@ function Navigation (props) {
     }
 
     
-    // console.log(props)
+
 
 let pathName = `${useLocation().pathname}`
 
-if (pathName==="/"){
+    if(pathName==="/"){
     pathName='home'
     } else {
     pathName = pathName.substring(1)
@@ -43,7 +43,8 @@ const handleSubmit=(event)=>{
     } else {
             props.setSearchInput(input)
             event.preventDefault()
-        navigate('search')
+            
+            window.location.assign(myUrl+"/search")
     }
 }
 

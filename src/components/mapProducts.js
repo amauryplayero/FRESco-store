@@ -6,7 +6,7 @@ import '../App.css'
 
 function MapProducts (props) {
     // console.log(props.items.cart)
- 
+//  console.log(props)
     const addItem= (item) => {
         // item.quantity++
         props.addItem(item)
