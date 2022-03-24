@@ -2,43 +2,58 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import MapProducts from './mapProducts'
 import '../App.css'
-// import { getCds } from '../../server/controller'
+
 const myUrl = "http://localhost:3001"
 
 
 function ProductCards() {
+  
 
-const [soaps, setSoaps] = useState([])
+const [soapsState, setSoapsState] = useState([])
 const [cds, setCds] = useState([])
+const [shirts, setShirts] = useState([])
 
-// console.log('productCards called')
 
 const getSoaps = () =>{
     axios.get(myUrl+"/soaps").then(res =>{
-        setSoaps(res.data)     
+        let soaps = []
+        let product = res.data
+        // console.log(product)
+        for(let i =0; i<res.data.length; i++){
+        soaps.push({...res.data[i], quantity: 0})   
+        }  
+        setSoapsState(soaps)
     })
 }
-
+    
     const getCds = () => {
-     axios.get(myUrl+"/cds").then(res =>{
-        setCds(res.data)       
-     })
-    
-    }
-    
-    useEffect(()=>{
+        axios.get(myUrl+"/cds").then(res =>{
+            let cds = []
+            let product = res.data
+            // console.log(product)
+            for(let i =0; i<res.data.length; i++){
+            cds.push({...res.data[i], quantity: 0})   
+            }  
+            setCds(cds)
+          
+            
+        })
+    } 
+  
+        useEffect(()=>{
         getSoaps()
+      
         getCds()
         }, [])
     // getSoaps()
     // getCds()
-
+        
     return(
         <>
             <div className="sectionTitle"><h3>Soaps</h3></div>
         <div  className="productsCardContainer">
       
-        <MapProducts data={soaps}/>
+        <MapProducts data={soapsState}/>
         </div>
 
         <div className="sectionTitle"><h3>Music</h3></div>

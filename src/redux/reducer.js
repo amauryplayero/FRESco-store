@@ -16,6 +16,7 @@ const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART'
 const CLEAR_CART = 'CLEAR_CART'
 const SET_SEARCH_INPUT = 'SET_SEARCH_INPUT'
 const SIGN_IN_USER = 'SIGN_IN_USER'
+const ADD_ONE_TO_QUANTITY = 'ADD_ONE_TO_QUANTITY'
 
 //ACTION FUNCTIONS
 
@@ -48,8 +49,14 @@ export const signInUser = (userName, boolean) =>{
                 authorized: boolean}
 
     }
+}
+
+export const addOneToQuantity = (product_id) => {
+    return {
+        type: ADD_ONE_TO_QUANTITY,
 
 
+    }
 }
 
 
@@ -57,14 +64,11 @@ export const signInUser = (userName, boolean) =>{
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case ADD_PRODUCT_TO_CART:
-            const items = action.payload    
-           
-            if(state.cart===undefined) {
-                return {cart: [items]}
-            } else {
-            
+            const items = action.payload  
+            console.log(state)
             return {cart: [...state.cart,items]}
-            }
+            
+            
         case CLEAR_CART:
             return {cart: []}
         
@@ -84,7 +88,10 @@ const reducer = (state = initialState, action) => {
                                 username: userName,
                                 authorized: authorized
                              }
-            }
+            };
+        
+            case ADD_ONE_TO_QUANTITY:
+                return
         default:
             return{...state}
     }

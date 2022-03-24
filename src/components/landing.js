@@ -9,11 +9,7 @@ import { clearCart } from "../redux/reducer";
 import Navigation from './navigation'
 
 const myUrl = "http://localhost:3001"
-function Landing (props) {
-
-    const [cart, setCart] = useState('hi')
-
-    const [registeredUser, setRegisteredUser] = useState(false)    
+function Landing (props) {   
  
   
     useEffect(()=>{

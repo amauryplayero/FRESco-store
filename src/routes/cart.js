@@ -19,9 +19,9 @@ function Cart(props) {
 
     const pathName = `${useLocation().pathname.substring(1)}`
 
-    const redirectToCheckout =()=>{
+    const redirectToCheckout =(quantity)=>{
 
-    axios.post(myUrl+`/create-checkout-session`)
+    axios.post(myUrl+`/create-checkout-session`, {quantity})
     .then(res=>{
        
         console.log(res.data.url)
@@ -29,7 +29,7 @@ function Cart(props) {
         
         })
     }
-
+    
     
     useEffect(()=>{
 
@@ -44,7 +44,7 @@ function Cart(props) {
         <h1>cart</h1>
         <MapCart />
         <button onClick={()=>props.clearCart()}>clear cart</button>
-        <button onClick={()=>redirectToCheckout()}>CHECK OUT</button>
+        <button onClick={()=>redirectToCheckout(props.items.cart.length)}>CHECK OUT</button>
         </>
     )
 }

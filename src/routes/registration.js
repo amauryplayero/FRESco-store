@@ -58,7 +58,7 @@ function Registration (props){
 
     }
 
-    console.log(props)
+   
     // const userSignedIn = props.signedInUser
 
     return(
@@ -95,7 +95,7 @@ function Registration (props){
 }
 
 const mapStateToProps = (state)=>{
-    console.log(state.signedInUser)
+    
     return {
         signedInUser: { 
             user: state.signedInUser,

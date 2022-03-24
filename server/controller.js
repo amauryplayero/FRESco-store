@@ -45,24 +45,25 @@ module.exports = {
     },
     checkOut: async(req,res)=>{
        
+        console.log("this is the req.body aaaaaaaaa",req.body)
         const session = await stripe.checkout.sessions.create({
             // const products = [req.body.products] add it from the front end 
             line_items: [
                 {
                   price: 'price_1KgGSGFz6IsrEsyrzcYxbfcC',
-                  quantity: 1,
+                  quantity: req.body.quantity,
                 },
-                {
-                 price: 'price_1KgGVDFz6IsrEsyrimwyyxDn',
-                 quantity: 1,
-                }
+                // {
+                //  price: 'price_1KgGVDFz6IsrEsyrimwyyxDn',
+                //  quantity: 1,
+                // }
               ],
               mode: 'payment',
               success_url: 'http://localhost:3002/Success',
-              cancel_url: 'http://localhost:3002/about',
+              cancel_url: 'http://localhost:3002/cart',
            
           })
-          console.log(session)
+        //   console.log(session)
               res.status(200).send(session)
           
         

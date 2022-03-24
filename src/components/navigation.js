@@ -88,7 +88,6 @@ const isUserSignedIn = () => {
     )
 }
 const mapStateToProps = (state) =>{
-    console.log(state)
    return {
     items: state.cart,
     input: state.input,
