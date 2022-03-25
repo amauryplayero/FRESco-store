@@ -27,10 +27,11 @@ function Registration (props){
         //    alert('missing info mofogger')
        
 
-        // axios.post(myUrl+'/registerUser', registrationData)
-        // .then(res=>{
-        //     console.log(res)
-        // })
+        axios.post(myUrl+'/registerUser', registrationData)
+        .then(res=>{
+            console.log(res)
+            window.location.reload(false)
+        })
     
         // console.log(registrationData.password)
 
@@ -52,7 +53,7 @@ function Registration (props){
                 props.signInUser(`${e.target[0].value}`,true)
                 navigate('/')
             } else {
-                console.log('could not signed you in')
+                alert('wrong password or username')
             }
         })
 

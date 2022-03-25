@@ -6,7 +6,17 @@ export default function Success() {
 
 
   return (
-    <div>Success!!!!!! your mofoggin soapy soap will be on its way </div>
+    <>
+  
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div>Success!!!!!! your soap will be on its way. </div>
+      <br/>
+      </>
 
   )
 }

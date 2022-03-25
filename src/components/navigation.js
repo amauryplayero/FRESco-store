@@ -40,11 +40,14 @@ const handleSubmit=(event)=>{
         event.preventDefault()
         props.setSearchInput(input)
         return
-    } else {
-            props.setSearchInput(input)
-            event.preventDefault()
-            
-            window.location.assign(myUrl+"/search")
+    } 
+    else {
+        event.preventDefault()
+        
+        props.setSearchInput(input)
+        // window.location.assign(myUrl+"/search")
+        navigate('search')
+        // props.setSearchInput(input)
     }
 }
 

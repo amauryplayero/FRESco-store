@@ -104,15 +104,22 @@ body{
   width:160px;
   /* height:30px; */
   line-height: 3px;
+  margin-top: 14px;
+  margin-left: 5px;
 }
 #type{
-  margin-top: 4px;
+  margin-top: 10px;
+
   
 }
 #name{
+  /* margin-top: 10px; */
+  /* border: 2px red solid; */
 font-size: 14px;
 }
 #price{
+    margin-top: 17px;
+
   color: rgb(16, 172, 16);
   font-weight: bold;
 }
@@ -122,17 +129,17 @@ font-size: 14px;
 }
 #addToCartButton{
   border: none;
-  height: 30px;
-  width: 165px;
+  height: 32px;
+  width: 156px;
   font-weight: bolder;
   border-radius: 10px;
   background-image: linear-gradient(to right, rgba(16, 46, 208, 1), rgba(0, 175, 214, 1));
   color:white;
+  margin-top:2px;
 }
 #addToCartButton:hover{
   border: none;
-  height: 30px;
-  width: 165px;
+
   font-weight: bolder;
   border-radius: 10px;
   background-image: linear-gradient(to right, rgb(191, 9, 42), rgb(18, 4, 139));
@@ -141,6 +148,7 @@ font-size: 14px;
 }
 #soapCard{
   /* border: 2px rgb(47, 78, 255) solid; */
+  margin-top: -7px;
   height: 280px;
 }
 
@@ -341,7 +349,7 @@ font-size: 14px;
 #cartinfo{
   /* border: 2px red solid; */
   text-align: start;
-  width:160px;
+  width:290px;
   /* height:30px; */
   line-height: 3px;
   border: 1px rgba(255, 0, 0, 0) solid;
@@ -381,7 +389,7 @@ font-size: 14px;
   /* flex-direction: column; */
   /* justify-self: center; */
   height: 130px;
-  margin-left: 290px;
+  margin-left: 160px;
   align-items: center;
 
 
@@ -392,6 +400,7 @@ font-size: 14px;
   width: fit-content;
   margin-top: 50px;
   margin-left: 35vw;
+  margin-bottom: 10vh
 }
 
 #clearCartButton{
@@ -420,8 +429,7 @@ font-size: 14px;
   padding: 11px 13px;
   font-size: 20px;
   border-radius: 15px;
-  background-image: linear-gradient(to right, rgb(34, 171, 39), rgb(1, 77, 25));
-}
+background-color: rgb(34, 171, 39);}
 
 #checkOutButton:hover{
   color:white;

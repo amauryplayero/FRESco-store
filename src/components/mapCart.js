@@ -1,24 +1,18 @@
 
 import {connect} from 'react-redux'
 import { useEffect, useState } from 'react'
-import {addItem} from '../redux/reducer'
-// import { showActiveCart } from '../redux/reducer'
-import axios from 'axios'
 import '../App.css'
-const myUrl = "http://localhost:3001"
 
 const MapCart = (props) => {
     const [products, setProducts] = useState([props.items.cart])
-    let testProduct = []
     
-    const product= products
     // consol,e.log9
     useEffect(()=>{
     setProducts([props.items.cart])
     }, [props.items.cart]) 
     
-    // console.log(products)
-    let unique = [...new Set(products[0])]
+    console.log(products)
+    // let unique = [...new Set(products[0])]
     
     
     
