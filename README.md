@@ -1,5 +1,4 @@
 Idea
-Users will be able to browse the pokedex and find stats on all of their favorite pokemon. if they desire, they can create an account, log in, and save “Team” ideas to their profile, based on different games (i.e. for emerald, they would have access to all pokemon up to gen 3, etc.)
 
 Users will be able to look through the store, add items to their card, or even create an account, log in, and keep the items on a wishlist. 
 
