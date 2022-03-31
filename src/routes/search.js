@@ -59,8 +59,12 @@ function Search (props) {
         <br/>
         <br/>
         <br/>
-        <h1>searched: "{props.input}"</h1>
-        <MapProducts data={filteredProducts}/>
+        <div id="searchedContainer">
+            <h1>searched: "{props.input}"</h1>
+            <div id="resultsFromSearchContainer">
+                <MapProducts data={filteredProducts}/>
+            </div>
+        </div>
         
        
         </>

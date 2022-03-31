@@ -3,7 +3,7 @@ require('dotenv').config({path: __dirname + '/../.env'})
 const stripe = require('stripe')('sk_test_51KeNN1Fz6IsrEsyrQEqENjXwnFQFQiX5mgsRbDV0iH3hX5HjS0R7Bboue2XWbqhdcgNgmwUOr42ujWOyMikF6wdA00O2X4FaIH')
 const {DATABASE_URL} = process.env
 const Sequelize = require('sequelize')
-const myUrl = "http://localhost:3003"
+
 
 
 const sequelize = new Sequelize(DATABASE_URL,{

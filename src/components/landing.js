@@ -7,6 +7,7 @@ import axios from "axios";
 import '../App.css'
 import { clearCart } from "../redux/reducer";
 import Navigation from './navigation'
+import Footer from "./footer";
 
 const myUrl = "http://localhost:3001"
 function Landing (props) {   
@@ -30,7 +31,9 @@ function Landing (props) {
        
       {/* <div id="soapsTitle" class="productTitle">Soaps</div> */}
         <ProductCards />
+
         </div>
+        <Footer />
         </>
 
     )

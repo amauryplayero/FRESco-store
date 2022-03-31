@@ -23,8 +23,13 @@ function Navigation (props) {
 
     
 
-
-let pathName = `${useLocation().pathname}`
+    let pathName = `${useLocation().pathname}`
+    let cartLogInPath = `${useLocation().pathname}`
+    if(cartLogInPath==="/cart"){
+        cartLogInPath='cart'
+    } else {
+        cartLogInPath=''
+    }
 
     if(pathName==="/"){
     pathName='home'
@@ -65,6 +70,7 @@ const isUserSignedIn = () => {
 
 
 
+
     return (
         <>
         
@@ -82,7 +88,7 @@ const isUserSignedIn = () => {
                         <img src="https://i.imgur.com/O4yGO7H.png" id="lupaIcon"/>
                         </div>
                         <div id="loginAndRegisterContainer">
-                            <Link to="/registration" className={`links${pathName}`} id="login">log in</Link>
+                            <Link to="/registration" className={`links${pathName}`} id={`login${cartLogInPath}`}>log in</Link>
                             <Link to="/registration" className={`links${pathName}`} id="register">register</Link>
                         </div>
                     </div>

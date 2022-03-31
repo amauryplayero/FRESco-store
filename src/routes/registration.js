@@ -64,7 +64,7 @@ function Registration (props){
 
     return(
         <>
-        <button id="backButton" onClick={()=>navigate('/')}> back to store</button>
+        <button id="backButton" onClick={()=>navigate('/')}> {` < back to store`}</button>
         <div id="generalContainer">
             <div class="formContainer">
                 <form id="signInForm"onSubmit={(e)=>handleSignInSubmit(e)}>
@@ -72,15 +72,15 @@ function Registration (props){
                     <div class="textContainer">
                         <div>
                             <p>username</p>
-                            <input></input>
+                            <input className="inputBox"></input>
                         </div>
 
                         <div>
                             <p>password</p>
-                            <input type="password"></input>
+                            <input className="inputBox" type="password"></input>
                             <br/>
                             
-                            <input type="submit" value="sign in"></input>
+                            <input id="registrationSignInButton" type="submit" value="sign in"></input>
                         </div>
                     </div>
                 </form>
@@ -93,24 +93,24 @@ function Registration (props){
                     <div class="textContainer">
                         <div>
                         <p>name</p>
-                        <input></input>
+                        <input className="inputBox"></input>
                         </div>
 
                         <div>
                         <p>username</p>
-                        <input></input>
+                        <input className="inputBox"></input>
                         </div>
 
                         <div>
                         <p>email</p>
-                        <input></input>
+                        <input className="inputBox"></input>
                         </div>
 
                         <div>
                         <p>password</p>
-                        <input type="password"></input>
+                        <input className="inputBox" type="password"></input>
                         <br/>
-                        <input type="submit" value="Register"></input>
+                        <input  id="registrationRegisterButton" type="submit" value="Register"></input>
                         </div>
                     </div>
                 </form>

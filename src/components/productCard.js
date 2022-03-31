@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import MapProducts from './mapProducts'
 import '../App.css'
 
-const myUrl = "http://localhost:3001"
+const myUrl = "https://frescostore.herokuapp.com"
 
 
 function ProductCards() {
@@ -60,13 +60,21 @@ const getSoaps = () =>{
         <div className="productsCardContainer">
         <MapProducts data={cds}/>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
 
-        <div className="sectionTitle"><h3>Shirts</h3></div>
+        {/* <div className="sectionTitle"><h3>Shirts</h3></div>
         <div>
             <h1>Shirts</h1>
         
-        </div>
-
+        </div> */}
+       
         </>
 
     )

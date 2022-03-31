@@ -21,7 +21,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-top: 30vh;
+  /* padding-top: 30vh; */
 }
 #about{
 
@@ -37,12 +37,22 @@ body{
   }
 }
 .sectionTitle{
+
   display: flex;
   margin-left: 15vw;
   font-size: 40px; 
-  color: rgb(227, 35, 35);
-  /* margin-left: 15vw; */
-  /* color: blue; */
+  color: rgb(227, 3, 3);
+  padding-top: 15vh;
+
+}
+.sectionTitle h3{
+
+  border-bottom: 2px red solid;
+  padding: 10px;
+  width: fit-content;
+  font-size: 70px;
+ 
+ 
 }
 .App-header {
   background-color: #282c34;
@@ -75,7 +85,7 @@ body{
   justify-content:space-evenly;
   margin-left: none;
   margin-right: 200px;
-  margin-bottom: 30vh;
+  /* margin-bottom: 30vh; */
   /* margin-top: 330px; */
   flex-wrap: wrap;
   width: 100vw;
@@ -214,7 +224,7 @@ font-size: 14px;
 }
 
 #searchBarhome{
-  height: 25px;
+  height: 27px;
   margin-top: 7px;
   width: 100px;
   padding-left: 10px;
@@ -239,20 +249,46 @@ font-size: 14px;
 }
 
 #login{
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 15px;
-  padding: 2px 5px 2px 5px;
+  padding: 4px 7px 1px 7px;
   border: 2px white solid;
+  background-color: #ffffff00;
   border-radius: 20px;
   height: 22px;
   margin-right: 10px;
+  color: white;
+  transition: 0.3s;
+}
+#login:hover{
+  /* background-color: #eeeeee; */
+  border: 2px rgb(0, 87, 237) solid;
+  color: rgb(0, 87, 237);
+}
+
+#logincart{
+  margin-top: 6px;
+  font-size: 15px;
+  padding: 4px 7px 1px 7px;
+  border: 2px rgb(92, 92, 92) solid;
+  background-color: #ffffff00;
+  border-radius: 20px;
+  height: 22px;
+  margin-right: 10px;
+  color: rgb(92, 92, 92);
+  transition: 0.3s;
+}
+#logincart:hover{
+  /* background-color: #eeeeee; */
+  border: 2px rgb(0, 87, 237) solid;
+  color: rgb(0, 87, 237);
 }
 
 #cartlogin{
   margin-top: 5px;
   font-size: 15px;
-  padding: 2px 5px 2px 5px;
-  border: 2px white solid;
+  padding: 4px 7px 1px 7px;
+  border: 2px rgb(103, 103, 103) solid;
   border-radius: 20px;
   height: 22px;
   margin-right: 10px;
@@ -260,15 +296,23 @@ font-size: 14px;
 }
 
 #register{
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 15px;
-  padding: 2px 5px 2px 5px;
+  padding: 5px 10px 1px 10px;
   /* border: 2px white solid; */
   border-radius: 20px;
   height: 25px;
   background-image: linear-gradient(to right, rgb(34, 112, 247), rgb(93, 0, 244));
   color: white;
+  /* -webkit-transition: background-image 20s ease-in-out; */
+  transition: background-image 2s ease-in-out;
 
+}
+
+#register:hover{
+  background-image: linear-gradient(to left, rgb(247, 55, 34), rgb(129, 88, 194));
+  /* -webkit-transition: background-image 0.2s ease-in-out; */
+  transition: background-image 5s ease-in-out;
 }
 
 #FRESco{
@@ -299,7 +343,7 @@ font-size: 14px;
 }
 
 .linkscart{
-  color: black;
+  color: rgb(13, 82, 233);
   font-weight: bolder;
   font-size: 30px;
   text-decoration: none;
@@ -325,11 +369,27 @@ font-size: 14px;
 
 /* CART SECTION//////////////////////// */
 
+#emptyCartContainer{
+  padding-top: 15vh;
+  display: block;
+ text-align: center;
+
+  /* flex-direction: column; */
+  width:100%;
+  height: 35vh;
+  /* border: red solid; */
+}
+#emptyCartContainer img{
+ width: 60px
+}
+
 #soapCardInCart{
   width: 50vw;
+  min-width: fit-content;
   /* border: 1px rgb(179, 179, 179) solid; */
   background-color: rgb(242, 242, 242);
   display: flex;
+  /* justify-content: space-around; */
   border-radius: 10px;
   align-items: center;
   box-shadow: .03px 1px 5px  #888888;
@@ -349,7 +409,7 @@ font-size: 14px;
 #cartinfo{
   /* border: 2px red solid; */
   text-align: start;
-  width:290px;
+  width:200px;
   /* height:30px; */
   line-height: 3px;
   border: 1px rgba(255, 0, 0, 0) solid;
@@ -360,16 +420,21 @@ font-size: 14px;
 #carttype{
   margin-top: 47px;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 
 }
 #cartname{
   font-size: 20px;
+  overflow-wrap:normal;
+  line-height: 24px;
+  /* border: red solid; */
+  width: fit-content;
+  height:45px;
  
 }
 #cartprice{
   font-size: 35px;
-  margin-top: 32px;
+  margin-top: 0px;
   margin-bottom: 0px;
   color: rgb(16, 172, 16);
   font-weight: bold;
@@ -384,22 +449,29 @@ font-size: 14px;
 }
 
 #priceAndShippingContainer{
-  /* border: 2px red solid; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-self: center; */
+  display: flex;
+  justify-content: end;
+  /* border: blue solid; */
   height: 130px;
-  margin-left: 160px;
+  width: 100%;
+  /* margin-left: 160px; */
   align-items: center;
+}
 
-
+#priceAndShippingTogetherContainer{
+  /* border: red solid; */
+  height: fit-content;
+  width: fit-content;
+  margin-right: 30px;
 }
 
 #cartButtonsContainer{
   /* border: 2px red solid; */
-  width: fit-content;
-  margin-top: 50px;
-  margin-left: 35vw;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  /* margin-top: 50px; */
+  margin-left: 55px;
   margin-bottom: 10vh
 }
 
@@ -473,8 +545,13 @@ background-color: rgb(34, 171, 39);}
 #backButton{
   position:fixed;
   margin: 20px;
-  /* font-weight: bold; */
-  /* font-size: larger; */
+  border: none;
+  background-color: rgba(95, 158, 160, 0);
+  font-weight: 900;
+  font-size: 20px;
+}
+#backButton:hover{
+ margin-left: 10px;
 }
 .textContainer h1{
   /* position: fixed; */
@@ -487,16 +564,106 @@ background-color: rgb(34, 171, 39);}
 .textContainer p{
   font-weight: bold;
   font-size: 20px;
+  line-height: 10px;
 }
 #signInH1{
-  /* border: 2px solid red; */
-  /* position: fixed; */
-  /* top: 20vh;
-  left: 10vh; */
-  /* padding-bottom: 30vh; */
+
 }
 
 #registerH1{
-  /* position: fixed; */
-  /* left: 20px; */
+
+}
+
+#registrationRegisterButton{
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: center;
+  height: fit-content;
+  padding:7px 20px 7px;
+  border: none;
+  border-radius:20px;
+  /* height: 25px; */
+  background-image: linear-gradient(to right, rgb(34, 112, 247), rgb(93, 0, 244));
+  color: white;
+  /* -webkit-transition: background-image 20s ease-in-out; */
+  transition: background-image 2s ease-in-out;
+
+}
+#registrationSignInButton{
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: center;
+  height: fit-content;
+  padding:7px 20px 7px;
+  border: none;
+  background-image: linear-gradient(to right, rgb(110, 210, 91), rgb(60, 192, 232));
+  border-radius:20px;
+  /* height: 25px; */
+  /* background-image: linear-gradient(to right, rgb(34, 112, 247), rgb(93, 0, 244)); */
+  color: white;
+
+}
+
+.inputBox{
+  border-radius: 9px;
+  border: 1px rgb(169, 169, 169) solid;
+  height: 20px
+}
+/* FOOTER------------------ =-=------------*/
+
+
+
+#footer{
+  /* border: 2px red solid; */
+  display: flex;
+  height:27vh;
+  background-image: linear-gradient(to right, rgb(13, 43, 162), rgb(34, 1, 1));
+  align-items: center;
+  /* padding-top: 10vh; */
+}
+
+#footerLinksContainer{
+  display: inline;
+  justify-content:center;
+  height: fit-content;
+  width: 100%;
+  /* border: 2px red solid; */
+  color: white;
+  /* flex-direction: column; */
+}
+
+
+#socialMediaIconContainer{
+  /* border: 2px red solid; */
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+}
+#socialMediaIconContainer div{
+  /* border: 2px red solid; */
+  display: flex;
+  justify-content: space-around;
+  width:200px;
+  margin-bottom: 2vh;
+}
+.socialMediaIcon{
+  height: 40px;
+}
+
+#footerText{
+  /* margin-top:3vh; */
+  color:rgb(232, 232, 232);
+  font-weight: bold;
+  /* border: 2px red solid; */
+}
+/* =----------SEARCH-------- */
+
+#searchedContainer{
+  margin-left: 30px;
+}
+
+#resultsFromSearchContainer{
+  display: flex;
 }
