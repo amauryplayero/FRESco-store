@@ -9,7 +9,7 @@ import { clearCart } from "../redux/reducer";
 import Navigation from './navigation'
 import Footer from "./footer";
 
-const myUrl = "http://localhost:3001"
+const myUrl = "https://frescostore.herokuapp.com"
 function Landing (props) {   
  
   

@@ -9,7 +9,7 @@ import bcrypt from 'bcryptjs'
 import { signInUser } from "../redux/reducer";
 
 const salt = bcrypt.genSalt(10)
-const myUrl = "http://localhost:3001"
+const myUrl = "https://frescostore.herokuapp.com"
 
 function Registration (props){
     

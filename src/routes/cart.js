@@ -11,7 +11,7 @@ import  {clearCart} from '../redux/reducer';
 
 
 
-const myUrl = "http://localhost:3001"
+const myUrl = "https://frescostore.herokuapp.com"
 
 
 function Cart(props) {   

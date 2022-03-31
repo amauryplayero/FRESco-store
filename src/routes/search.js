@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import MapProducts from '../components/mapProducts'
 
-const myUrl = "http://localhost:3001"
+const myUrl = "https://frescostore.herokuapp.com"
 
 function Search (props) { 
 

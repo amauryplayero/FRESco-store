@@ -29,15 +29,6 @@ try {
 }
 };
 
-// const saveStateUserName = (state) => {
-//   try {
-//     const serializedState = JSON.stringify(state);
-//     localStorage.setItem('userCredentials', serializedState);
-//     localStorage.setItem('state', serializedState);
-//   } catch {
-//     // ignore write errors
-//   }
-//   };
 
 
 
@@ -48,25 +39,14 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-  // saveState({
-  //  cart: store.getState().cart
-  // });
+
 
   saveState({
     cart: store.getState().cart,
-    // signedInUser: {
-    //   userName: store.getState().signedInUser,
-    //   authorized: store.getState().signedInUser
-    // }
-    
+
    });
 
-  // saveStateUserName({
-  //   signedInUser: {
-  //   username: store.getState().signedInUser.username,
-  //   authorized: store.getState().signedInUser.authorized
-  //   }
-  // })
+
 });
 
 

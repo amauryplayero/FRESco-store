@@ -59,8 +59,8 @@ module.exports = {
                 // }
               ],
               mode: 'payment',
-              success_url: 'http://localhost:3002/Success',
-              cancel_url: 'http://localhost:3002/cart',
+              success_url: 'https://frescostore.herokuapp.com/Success',
+              cancel_url: 'https://frescostore.herokuapp.com/cart',
            
           })
         //   console.log(session)

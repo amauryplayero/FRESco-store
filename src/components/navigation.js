@@ -8,7 +8,7 @@ import '../App.css'
 import { setSearchInput } from "../redux/reducer";
 import Search from '../routes/search'
 
-const myUrl = "http://localhost:3002"
+const myUrl = "https://frescostore.herokuapp.com"
 
 function Navigation (props) {
 
