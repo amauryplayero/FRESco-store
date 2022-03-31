@@ -15,7 +15,7 @@ const [shirts, setShirts] = useState([])
 
 
 const getSoaps = () =>{
-    axios.get(myUrl+"/soaps").then(res =>{
+    axios.get("/soaps").then(res =>{
         let soaps = []
         let product = res.data
         // console.log(product)
