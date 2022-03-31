@@ -2,7 +2,7 @@ require('dotenv').config({path: __dirname + '/../.env'})
 const express = require('express')
 const cors = require('cors')
 // const path = require('path')
-const PORT = 3001
+const PORT = 3002
 const app = express()
 const ctrl = require('./controller')
 
