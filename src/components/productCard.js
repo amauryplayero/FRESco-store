@@ -27,7 +27,7 @@ const getSoaps = () =>{
 }
     
     const getCds = () => {
-        axios.get(`/cds`).then(res =>{
+        axios.get(`${myUrl}/cds`).then(res =>{
             let cds = []
             let product = res.data
             // console.log(product)
