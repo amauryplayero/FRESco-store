@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react"
-import { useLocation } from 'react-router-dom'
+
+import { useEffect } from "react"
+
 import { connect } from 'react-redux'
 import ProductCards from './productCard'
-import axios from "axios";
+
 import '../App.css'
 import { clearCart } from "../redux/reducer";
 import Navigation from './navigation'
 import Footer from "./footer";
 
-const myUrl = "https://frescostore.herokuapp.com"
+
 function Landing (props) {   
  
   
