@@ -45,7 +45,7 @@ module.exports = {
     },
     checkOut: async(req,res)=>{
        
-        console.log("this is the req.body aaaaaaaaa",req.body)
+        // console.log("this is the req.body aaaaaaaaa",req.body)
         const session = await stripe.checkout.sessions.create({
             // const products = [req.body.products] add it from the front end 
             line_items: [
