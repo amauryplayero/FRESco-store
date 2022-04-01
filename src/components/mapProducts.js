@@ -11,17 +11,7 @@ function MapProducts (props) {
         // item.quantity++
         props.addItem(item)
         
-        // console.log(props.items.cart.includes(item))
-        // if(props.items.cart.includes(item)===true){
-        //     console.log(item)
-        //     // add 1 to quantity on local state's cart (maybe a property)
-        //     // props.addOneToQuantity()
-        // } else {
-            
-        //     console.log(props.items.cart)
-        // }
-            
-        
+  
     }
     // console.log(products)
     useEffect(()=>{

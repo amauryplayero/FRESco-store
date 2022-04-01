@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import MapProducts from './mapProducts'
 import '../App.css'
 
-const myUrl = "http://localhost:3001"
+const myUrl = "https://624661b5ae6ce00008f2990d--jazzy-gnome-eaf65f.netlify.app"
 
 
 function ProductCards() {
