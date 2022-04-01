@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static('public'))
 
-app.get("/soaps", ctrl.getSoaps)
+app.get("https://frescostore.herokuapp.com/soaps", ctrl.getSoaps)
 app.get("/cds", ctrl.getCds)
 app.put("/showCart/:id", ctrl.showCart)
 app.post('/create-checkout-session', ctrl.checkOut)
