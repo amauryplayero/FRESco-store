@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import MapProducts from './mapProducts'
 import '../App.css'
 
-const myUrl = "https://frescostore.herokuapp.com"
+const myUrl = "http://localhost:3001"
 
 
 function ProductCards() {
