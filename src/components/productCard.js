@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import MapProducts from './mapProducts'
 import '../App.css'
 
-const myUrl = "https://624661b5ae6ce00008f2990d--jazzy-gnome-eaf65f.netlify.app"
+// const myUrl = "https://624661b5ae6ce00008f2990d--jazzy-gnome-eaf65f.netlify.app"
 
 
 function ProductCards() {
@@ -15,7 +15,7 @@ const [shirts, setShirts] = useState([])
 
 
 const getSoaps = () =>{
-    axios.get(`${myUrl}/soaps`).then(res =>{
+    axios.get(`/soaps`).then(res =>{
         let soaps = []
         let product = res.data
         // console.log(product)
@@ -27,7 +27,7 @@ const getSoaps = () =>{
 }
     
     const getCds = () => {
-        axios.get(`${myUrl}/cds`).then(res =>{
+        axios.get(`/cds`).then(res =>{
             let cds = []
             let product = res.data
             // console.log(product)
