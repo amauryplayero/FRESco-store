@@ -1,2 +1,1 @@
-web: npm start
-web: node index.js
+web: sh -c 'npm start && node index.js'
