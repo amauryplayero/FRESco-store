@@ -23,6 +23,7 @@ app.post('/searchItem',ctrl.searchMatching)
 app.post('/registerUser', ctrl.registerUser)
 app.post('/logInUser', ctrl.logInUser)
 
+console.log('HAAIAIAIAIAIAIAIAI')
 app.listen(PORT, ()=>{console.log("listening on" + PORT)})
 
 
