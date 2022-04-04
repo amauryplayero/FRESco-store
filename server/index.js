@@ -10,10 +10,10 @@ const ctrl = require('./controller')
 
 app.use(cors())
 app.use(express.json())
-// app.use(express.static('public'))
-app.use('/', express.static(path.join(__dirname, 'dist')))
+app.use(express.static('my-app'))
+// app.use('/', express.static(path.join(__dirname, 'my-app/sever')))
 
-app.get("/soaps", ctrl.getSoaps)
+app.get('/soaps', ctrl.getSoaps)
 app.get("/cds", ctrl.getCds)
 app.put("/showCart/:id", ctrl.showCart)
 app.post('/create-checkout-session', ctrl.checkOut)
