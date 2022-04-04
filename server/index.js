@@ -10,8 +10,11 @@ const ctrl = require('./controller')
 
 app.use(cors())
 app.use(express.json())
-app.use(express.static('my-app'))
-// app.use('/', express.static(path.join(__dirname, 'my-app/sever')))
+app.use(express.static('public'))
+
+app.get('/',function(req,res) {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
 
 app.get('/soaps', ctrl.getSoaps)
 app.get("/cds", ctrl.getCds)
