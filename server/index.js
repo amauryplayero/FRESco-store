@@ -12,9 +12,6 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static(path.resolve(__dirname, '../build')))
 
-app.get('/*', function (req,res) {
-  res.sendFile(path.join(__dirname, '../build', 'index.html'))
-})
 
 app.get('/soaps', ctrl.getSoaps)
 app.get("/cds", ctrl.getCds)
@@ -24,6 +21,9 @@ app.post('/searchItem',ctrl.searchMatching)
 app.post('/registerUser', ctrl.registerUser)
 app.post('/logInUser', ctrl.logInUser)
 
+app.get('/*', function (req,res) {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'))
+})
 console.log('HAAIAIAIAIAIAIAIAI')
 app.listen(PORT, ()=>{console.log("listening on" + PORT)})
 
